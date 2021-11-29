@@ -541,8 +541,9 @@
       "frequency": 7902.13
     }
   ],
-  "instruments": {
-    "guitar": {
+  "instruments": [
+    {
+      "name": "guitar",
       "lines": [
         {
           "firstNote": {
@@ -588,5 +589,5 @@
         }
       ]
     }
-  }
+  ]
 }
