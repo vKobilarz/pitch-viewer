@@ -23,7 +23,7 @@ const AudioContext = {
   },
 };
 
-export const autoCorrelate = (buf: Array<number>, sampleRate: number) => {
+export const getCurrentPitch = (buf: Float32Array, sampleRate: number) => {
   var SIZE = buf.length;
   var rms = 0;
 

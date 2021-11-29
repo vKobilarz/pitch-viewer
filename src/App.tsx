@@ -1,11 +1,8 @@
 import React from 'react';
+import GuitarView from './pages/Guitar';
 
 const App = () => {
-  return (
-    <div>
-      Edit <code>src/App.tsx</code> and save to reload.
-    </div>
-  );
+  return <GuitarView />;
 };
 
 export default App;
