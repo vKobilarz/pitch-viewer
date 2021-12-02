@@ -5,21 +5,28 @@ import BassGuitar from '../../assets/bass-guitar.svg';
 
 import Icon from '../../components/Icon';
 
-import { InstrumentButton, InstrumentTitle } from './styles';
+import {
+  InstrumentsContainer,
+  InstrumentButton,
+  InstrumentTitle,
+  InstrumentsList,
+} from './styles';
 
 const Instruments: FC = () => {
   return (
-    <>
+    <InstrumentsContainer>
       <h2>Select your instrument!</h2>
-      <InstrumentButton>
-        <Icon path={ElectricGruitar} width={128} />
-        <InstrumentTitle>Guitar</InstrumentTitle>
-      </InstrumentButton>
-      <InstrumentButton>
-        <Icon path={BassGuitar} width={128} />
-        <InstrumentTitle>Bass</InstrumentTitle>
-      </InstrumentButton>
-    </>
+      <InstrumentsList>
+        <InstrumentButton to="/instruments/guitar">
+          <Icon path={ElectricGruitar} width={128} />
+          <InstrumentTitle>Guitar</InstrumentTitle>
+        </InstrumentButton>
+        <InstrumentButton to="/instruments/bass">
+          <Icon path={BassGuitar} width={128} />
+          <InstrumentTitle>Bass</InstrumentTitle>
+        </InstrumentButton>
+      </InstrumentsList>
+    </InstrumentsContainer>
   );
 };
 
