@@ -1,13 +1,15 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Route,
   Redirect,
   Switch,
+  Route,
 } from 'react-router-dom';
 
 import GuitarInstrument from '../pages/GuitarInstrument';
 import Instruments from '../pages/Instruments';
+
+import PageRoute from './PageRoute';
 
 const RouterProvider = () => {
   return (
@@ -16,12 +18,18 @@ const RouterProvider = () => {
         <Route path="/" exact>
           <Redirect to="/instruments" />
         </Route>
-        <Route path="/instruments" exact>
+        <PageRoute
+          title="Instruments"
+          routeParams={{ path: '/instruments', exact: true }}
+        >
           <Instruments />
-        </Route>
-        <Route path="/instruments/guitar">
+        </PageRoute>
+        <PageRoute
+          title="Guitar Instrument"
+          routeParams={{ path: '/instruments/guitar' }}
+        >
           <GuitarInstrument />
-        </Route>
+        </PageRoute>
       </Switch>
     </Router>
   );
