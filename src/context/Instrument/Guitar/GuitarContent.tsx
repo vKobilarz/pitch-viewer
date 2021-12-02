@@ -4,9 +4,7 @@ import { getInstrumentNotes } from '../../../services/InstrumentService';
 import { useInstrument } from '../../Instrument';
 
 const GuitarContent: FC = ({ children }) => {
-  const { initializeInstrumentLines, instrumentLines } = useInstrument();
-
-  console.log(instrumentLines);
+  const { initializeInstrumentLines } = useInstrument();
 
   useEffect(() => {
     const fetchData = async () => {

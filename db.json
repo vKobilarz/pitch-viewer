@@ -550,42 +550,42 @@
             "octave": 2,
             "name": "E"
           },
-          "length": 25
+          "length": 20
         },
         {
           "firstNote": {
             "octave": 2,
             "name": "A"
           },
-          "length": 25
+          "length": 20
         },
         {
           "firstNote": {
             "octave": 3,
             "name": "D"
           },
-          "length": 25
+          "length": 20
         },
         {
           "firstNote": {
             "octave": 3,
             "name": "G"
           },
-          "length": 25
+          "length": 20
         },
         {
           "firstNote": {
             "octave": 3,
             "name": "B"
           },
-          "length": 25
+          "length": 20
         },
         {
           "firstNote": {
             "octave": 4,
             "name": "E"
           },
-          "length": 25
+          "length": 20
         }
       ]
     }
