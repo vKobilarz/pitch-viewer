@@ -17,3 +17,9 @@ export const InstrumentButton = styled.button`
     border: 1px solid rgba(255, 255, 255, 0.11);
   }
 `;
+
+export const InstrumentTitle = styled.h4`
+  color: #fafafa;
+  font-size: 24px;
+  margin: 16px 0px 0px 0px;
+`;
