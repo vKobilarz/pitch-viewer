@@ -1,6 +1,6 @@
 import React from 'react';
 
-import InstrumentProvider from '../Notes';
+import NotesProvider from '../Notes';
 import NotesContent from './NotesContent';
 
 export const withNotes = (
@@ -8,11 +8,11 @@ export const withNotes = (
 ): (() => JSX.Element) => {
   return () => {
     return (
-      <InstrumentProvider>
+      <NotesProvider>
         <NotesContent>
           <Component />
         </NotesContent>
-      </InstrumentProvider>
+      </NotesProvider>
     );
   };
 };

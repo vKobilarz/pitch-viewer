@@ -1,20 +1,4 @@
-import React, { FC, useCallback, useState } from 'react';
+import withGuitar from '../../context/Instrument/Guitar/withGuitar';
+import Instrument from '../../components/Instrument';
 
-import AudioListener from '../../listeners/Audio';
-
-const GuitarInstrument: FC = () => {
-  const [listenerActive, setListenerActive] = useState<Boolean>(false);
-
-  const handleStartClick = useCallback(() => {
-    setListenerActive(true);
-  }, []);
-
-  return (
-    <>
-      {listenerActive && <AudioListener />}
-      <button onClick={handleStartClick}>Start</button>
-    </>
-  );
-};
-
-export default GuitarInstrument;
+export default withGuitar(Instrument);

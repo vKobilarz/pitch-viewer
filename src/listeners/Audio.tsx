@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useState } from 'react';
+import { FC, useCallback, useEffect, useState } from 'react';
 
 import AudioContext, { getCurrentPitch } from '../helpers/audio';
 
@@ -9,17 +9,20 @@ const audioCtx = AudioContext.getAudioContext();
 
 var buf = new Float32Array(buflen);
 
-const AudioListener: FC = () => {
+interface AudioListenerProps {
+  onPitchChange(newPitch: number): void;
+}
+
+const AudioListener: FC<AudioListenerProps> = ({ onPitchChange }) => {
   const [source, setSource] = useState<MediaStreamAudioSourceNode>();
-  const [pitch, setPitch] = useState<number>(-1);
 
   const updatePitch = useCallback(() => {
     analyserNode.getFloatTimeDomainData(buf);
     const currentPitch = getCurrentPitch(buf, audioCtx.sampleRate);
     if (currentPitch > -1) {
-      setPitch(currentPitch);
+      onPitchChange(currentPitch);
     }
-  }, []);
+  }, [onPitchChange]);
 
   const getMicInput = useCallback(() => {
     return navigator.mediaDevices.getUserMedia({
@@ -46,7 +49,7 @@ const AudioListener: FC = () => {
   }, [getMicInput, updatePitch]);
   setInterval(updatePitch, 50);
 
-  return <div>Current Pitch: {pitch}</div>;
+  return null;
 };
 
 export default AudioListener;
