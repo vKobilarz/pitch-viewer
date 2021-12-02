@@ -16,8 +16,3 @@ export const Content = styled.div`
 
   margin: 0px 24px;
 `;
-
-export const Title = styled.h1`
-  width: 100%;
-  max-width: 1024px;
-`;

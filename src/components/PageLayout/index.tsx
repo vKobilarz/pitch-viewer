@@ -1,15 +1,10 @@
 import React, { FC } from 'react';
 
-import { Container, Content, Title } from './styles';
+import { Container, Content } from './styles';
 
-interface PageLayoutProps {
-  title: String;
-}
-
-const PageLayout: FC<PageLayoutProps> = ({ title, children }) => {
+const PageLayout: FC = ({ children }) => {
   return (
     <Container>
-      <Title>{title}</Title>
       <Content>{children}</Content>
     </Container>
   );
