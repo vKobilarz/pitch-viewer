@@ -1,8 +1,8 @@
 import React from 'react';
-import GuitarView from './pages/Guitar';
+import RouterProvider from './routes';
 
 const App = () => {
-  return <GuitarView />;
+  return <RouterProvider />;
 };
 
 export default App;
