@@ -24,3 +24,8 @@ On this App, you can view the notes you are playing with your guitar. It capture
 This project was created the test an HOC architecture with contexts on React. Using the instrument context as an example, it is following the structure:
 
 ![image](https://user-images.githubusercontent.com/44646469/145051992-7e5516e2-8e40-4a82-9152-2906b4a53576.png)
+
+ - On `InstrumentContext`, we have all atributes and functions that are common to all instruments. `instrumentLines` is an example, which is an array with the first note and the length of their line.
+ - `GuitarContent` and `BassContent` is responsible to fetch data of their instruments and initialize the `InstrumentContext`.
+ - `withGuitar` adn `withBass` is a HOC that receives a component and wraps it with the `InstrumentProvider` and matching `Content`.
+ - Finally, the `Instrument` is a generic component that gets the `instrumentLines` from `InstrumentContext` and renders them on the freatboard.
