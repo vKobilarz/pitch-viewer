@@ -14,6 +14,13 @@ On this App, you can view the notes you are playing with your guitar. It capture
 
 ## Upcoming Features
 
+ - More Instruments!
  - Scales! You might choose a scale and all its notes will be highlighted on the fretboard.
  - Notes history, after choosing a tempo, you will have a timeline of your notes played on the last 30 seconds.
  - Automatic Scales! With scales and notes history implemented, it is possible te determine which scale your music is, changing it automatically.
+
+---
+
+This project was created the test an HOC architecture with contexts on React. Using the instrument context as an example, it is following the structure:
+
+![image](https://user-images.githubusercontent.com/44646469/145051992-7e5516e2-8e40-4a82-9152-2906b4a53576.png)
